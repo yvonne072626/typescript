@@ -7,3 +7,13 @@
 
 // 請在下方寫下你的程式碼
 
+type fetchData = {
+    id: number;
+    title: string;
+    completed: boolean;
+}
+
+export async function fetchData(url: string): Promise<fetchData> {
+    const response = (await fetch(url)).json().then((data: fetchData) => data);
+    return response;    
+}

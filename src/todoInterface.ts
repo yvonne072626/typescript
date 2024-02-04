@@ -13,7 +13,19 @@
  * 輸出: [{ id: 1, task: 'Buy milk', completed: false }, { id: 2, task: 'Walk the dog', completed: false }]
  */
 
-export function addTodo(todos: Todo[], task: string): Todo[] {
+interface TodoList {
+    id: number;
+    task: string;
+    completed: boolean;
+}[];
+
+
+export function addTodo(todos:TodoList[], task: string): TodoList[] {
     // 在此實現函式
+    const newTodo = { 
+        id: todos.length + 1, 
+        task, 
+        completed: false 
+    };
     return [...todos, newTodo];
 }

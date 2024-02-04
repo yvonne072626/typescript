@@ -14,7 +14,6 @@ export function classifyAge(age: number): string {
     // 請在此處寫下你的程式碼
     switch(age) {
         case 10:
-            console.log("Child");
             return "Child";
         case 15:
             return "Teenager";
@@ -27,5 +26,3 @@ export function classifyAge(age: number): string {
     }
 }
 classifyAge(10);
-
-console.log(classifyAge(10)); // Child

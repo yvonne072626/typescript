@@ -6,4 +6,11 @@
  */
 export function uniqueElements(array: number[]): number[] {
     // 請在此處寫下你的程式碼
+    return array.reduce((acc: number[], cur: number) => {
+        if (!acc.includes(cur)) {
+            acc.push(cur);
+        }
+        return acc;
+    },[]);  
 }
+console.log(uniqueElements([1, 2, 2, 3, 4, 4, 4])); // [1, 2, 3, 4]
