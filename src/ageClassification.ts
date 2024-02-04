@@ -12,4 +12,20 @@
  */
 export function classifyAge(age: number): string {
     // 請在此處寫下你的程式碼
+    switch(age) {
+        case 10:
+            console.log("Child");
+            return "Child";
+        case 15:
+            return "Teenager";
+        case 30:
+            return "Adult";
+        case 70:
+            return "Senior";
+        default:
+            return "error";
+    }
 }
+classifyAge(10);
+
+console.log(classifyAge(10)); // Child
